@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a68f6e6e.css",
+    "main.js": "/static/js/main.2d77e228.js",
+    "static/media/moon.mp4": "/static/media/moon.1997a5917a552d8c366a.mp4",
+    "static/media/layers.mp4": "/static/media/layers.f176151b4469490e5631.mp4",
+    "static/media/robot.mp4": "/static/media/robot.8f1a76110c0142a5e011.mp4",
+    "static/media/robotReverse.mp4": "/static/media/robotReverse.833baec9d8e373a96447.mp4",
+    "static/media/MyImage.gif": "/static/media/MyImage.5631ddc893023430ce4a.gif",
+    "static/media/stars-galaxy.gif": "/static/media/stars-galaxy.ce01deaead1544504ac9.gif",
+    "static/media/male.png": "/static/media/male.ff3e9b7b4133cc67110a.png",
+    "static/media/Lunaredge.png": "/static/media/Lunaredge.80bcfbb5ff9e6e2065cc.png",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "index.html": "/index.html",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
+    "main.a68f6e6e.css.map": "/static/css/main.a68f6e6e.css.map",
+    "main.2d77e228.js.map": "/static/js/main.2d77e228.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a68f6e6e.css",
+    "static/js/main.2d77e228.js"
+  ]
+}

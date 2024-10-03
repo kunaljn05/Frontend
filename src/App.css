@@ -1,0 +1,602 @@
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+
+
+/* Ensure the header stays on top of other content */
+header {
+  z-index: 50; /* or higher */
+}
+
+.underlineHover:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.services-container {
+width: auto;
+}
+
+.hero-button:hover{
+  background-image: url('./assets/stars-galaxy.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.tech-box {
+  perspective: 1000px; /* Enables 3D perspective */
+  transition: background-color 0.5s ease 0.2s; /* Transition for background color with delay */
+}
+
+.tech-content {
+  display: inline-block; /* Required for 3D transformations */
+  transition: transform 0.6s; /* Transition for smooth flipping */
+}
+
+.tech-box:hover {
+  background-color: black; /* Change background color on hover */
+}
+
+.tech-box:hover .tech-content {
+  animation: flip 0.6s forwards; /* Start flip animation on hover */
+}
+
+@keyframes flip {
+  0% {
+      transform: rotateY(0deg);
+  }
+  100% {
+      transform: rotateY(360deg); /* Complete a full 360-degree rotation */
+  }
+}
+
+.techBoxContainer{
+  backdrop-filter: blue(30px);
+  box-shadow: 0px 0px 30px rgba(277, 228, 237,0.37);
+  border: 2px solid rgba(255, 255, 255,0.18);
+}
+
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.box {
+  box-shadow: 0px 0px 6px grey;
+}
+
+/* moon-rotation css  */
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-continuous {
+  animation: rotate 20s linear infinite;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, rgba(255,0,150,1) 0%, rgba(0,204,255,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* swipe-down-button  */
+.image-container {
+  position: relative;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.3s ease;
+}
+
+.image-first {
+  opacity: 1;
+}
+
+.image-second {
+  opacity: 0;
+}
+
+.image-container:hover .image-first {
+  opacity: 0;
+}
+
+.image-container:hover .image-second {
+  opacity: 1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+/* scroll button css */
+@import url(https://fonts.googleapis.com/css?family=Cabin);
+
+/* body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  background-color: #30333A;
+} */
+
+.mouse{
+  width: 52px;
+  height: 88px;
+  position: relative;
+  background: #4e5559 linear-gradient(transparent 0%,
+                                      transparent 50%,
+                                      #ffffff 50%,
+                                      #ffffff 100%);
+  background-size: 100% 200%;
+  border-radius: 100px;
+  animation: colorSlide 5s linear infinite,
+             nudgeMouse 5s ease-out infinite;
+}
+.mouse:before,
+.mouse:after{
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+.mouse:before{
+  width: 46px;
+  height: 82px;
+  background-color: #30333a;
+  border-radius: 100px;
+}
+.mouse:after{
+  background-color: #ffffff;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  animation: trackBallSlide 5s linear infinite;
+}
+.text{
+  margin-top: 50px;
+  font-family: Cabin;
+  letter-spacing: 12px;
+  color: #fff;
+  text-indent: 12px;
+  animation: colorText 5s ease-out infinite,
+             nudgeText 5s ease-out infinite;
+}
+
+/* Animations */
+@keyframes colorSlide{
+  0% {
+    background-position: 0% 100%;
+  }
+  20% {
+    background-position: 0% 0%;
+  }
+  21% {
+    background-color: #4e5559;
+  }
+  29.99% {
+    background-color: #ffffff;
+    background-position: 0% 0%;
+  }
+  30% {
+    background-color: #4e5559;
+    background-position: 0% 100%;
+  }
+  50% {
+    background-position: 0% 0%;
+  }
+  51% {
+    background-color: #4e5559;
+  }
+  59% {
+    background-color: #ffffff;
+    background-position: 0% 0%;
+  }
+  60% {
+    background-color: #4e5559;
+    background-position: 0% 100%;
+  }
+  80% {
+    background-position: 0% 0%;
+  }
+  81% {
+    background-color: #4e5559;
+  }
+  90%, 100% {
+    background-color: #ffffff;
+  }
+}
+
+@keyframes colorText{
+  21% {
+    color: #4e5559;
+  }
+  30% {
+    color: #ffffff;
+  }
+  51% {
+    color: #4e5559;
+  }
+  60% {
+    color: #ffffff;
+  }
+  81% {
+    color: #4e5559;
+  }
+  90% {
+    color: #ffffff;
+  }
+} 
+
+@keyframes trackBallSlide{
+  0%{
+    opacity: 1;
+    transform: scale(1) translateY(-20px);
+  }
+  6%{
+    opacity: 1;
+    transform: scale(0.9) translateY(5px);
+  }
+  14%{
+    opacity: 0;
+    transform: scale(0.4) translateY(40px);
+  }
+  15%, 19%{
+    opacity: 0;
+    transform: scale(0.4) translateY(-20px);
+  }
+  28%, 29.99%{
+    opacity: 1;
+    transform: scale(1) translateY(-20px);
+  }
+  30%{
+    opacity: 1;
+    transform: scale(1) translateY(-20px);
+  }
+  36%{
+    opacity: 1;
+    transform: scale(0.9) translateY(5px);
+  }
+  44%{
+    opacity: 0;
+    transform: scale(0.4) translateY(40px);
+  }
+  45%, 49%{
+    opacity: 0;
+    transform: scale(0.4) translateY(-20px);
+  }
+  58%, 59.99%{
+    opacity: 1;
+    transform: scale(1) translateY(-20px);
+  }
+  60%{
+    opacity: 1;
+    transform: scale(0.9) translateY(-20px);
+  }
+  66%{
+    opacity: 1;
+    transform: scale(0.9) translateY(5px);
+  }
+  74%{
+    opacity: 0;
+    transform: scale(0.4) translateY(40px);
+  }
+  75%, 79%{
+    opacity: 0;
+    transform: scale(0.4) translateY(-20px);
+  }
+  88%, 100%{
+    opacity: 1;
+    transform: scale(1) translateY(-20px);
+  }
+}
+@keyframes nudgeMouse{
+  0%{
+    transform: translateY(0);
+  }
+  20%{
+    transform: translateY(8px);
+  }
+  30%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(8px);
+  }
+  60%{
+    transform: translateY(0);
+  }
+  80%{
+    transform: translateY(8px);
+  }
+  90%{
+    transform: translateY(0);
+  }
+}
+@keyframes nudgeText {
+  0%{
+    transform: translateY(0);
+  }
+  20%{
+    transform: translateY(2px);
+  }
+  30%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(2px);
+  }
+  60%{
+    transform: translateY(0);
+  }
+  80%{
+    transform: translateY(2px);
+  }
+  90%{
+    transform: translateY(0);
+  }
+}
+
+/* **********home scroll down button******** */
+
+@import url(https://fonts.googleapis.com/css?family=Cabin);
+
+/* body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  background-color: #30333A;
+} */
+
+.mouse{
+  width: 52px;
+  height: 88px;
+  position: relative;
+  background: #4e5559 linear-gradient(transparent 0%,
+                                      transparent 50%,
+                                      #ffffff 50%,
+                                      #ffffff 100%);
+  background-size: 100% 200%;
+  border-radius: 100px;
+  animation: colorSlide 5s linear infinite,
+             nudgeMouse 5s ease-out infinite;
+}
+.mouse:before,
+.mouse:after{
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+.mouse:before{
+  width: 46px;
+  height: 82px;
+  background-color: #30333a;
+  border-radius: 100px;
+}
+.mouse:after{
+  background-color: #ffffff;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  animation: trackBallSlide 5s linear infinite;
+}
+.text{
+  margin-top: 50px;
+  font-family: Cabin;
+  letter-spacing: 12px;
+  color: #fff;
+  text-indent: 12px;
+  animation: colorText 5s ease-out infinite,
+             nudgeText 5s ease-out infinite;
+}
+
+/* Animations */
+@keyframes colorSlide{
+  0% {
+    background-position: 0% 100%;
+  }
+  20% {
+    background-position: 0% 0%;
+  }
+  21% {
+    background-color: #4e5559;
+  }
+  29.99% {
+    background-color: #ffffff;
+    background-position: 0% 0%;
+  }
+  30% {
+    background-color: #4e5559;
+    background-position: 0% 100%;
+  }
+  50% {
+    background-position: 0% 0%;
+  }
+  51% {
+    background-color: #4e5559;
+  }
+  59% {
+    background-color: #ffffff;
+    background-position: 0% 0%;
+  }
+  60% {
+    background-color: #4e5559;
+    background-position: 0% 100%;
+  }
+  80% {
+    background-position: 0% 0%;
+  }
+  81% {
+    background-color: #4e5559;
+  }
+  90%, 100% {
+    background-color: #ffffff;
+  }
+}
+
+@keyframes colorText{
+  21% {
+    color: #4e5559;
+  }
+  30% {
+    color: #ffffff;
+  }
+  51% {
+    color: #4e5559;
+  }
+  60% {
+    color: #ffffff;
+  }
+  81% {
+    color: #4e5559;
+  }
+  90% {
+    color: #ffffff;
+  }
+} 
+
+@keyframes trackBallSlide{
+  0%{
+    opacity: 1;
+    transform: scale(1) translateY(-20px);
+  }
+  6%{
+    opacity: 1;
+    transform: scale(0.9) translateY(5px);
+  }
+  14%{
+    opacity: 0;
+    transform: scale(0.4) translateY(40px);
+  }
+  15%, 19%{
+    opacity: 0;
+    transform: scale(0.4) translateY(-20px);
+  }
+  28%, 29.99%{
+    opacity: 1;
+    transform: scale(1) translateY(-20px);
+  }
+  30%{
+    opacity: 1;
+    transform: scale(1) translateY(-20px);
+  }
+  36%{
+    opacity: 1;
+    transform: scale(0.9) translateY(5px);
+  }
+  44%{
+    opacity: 0;
+    transform: scale(0.4) translateY(40px);
+  }
+  45%, 49%{
+    opacity: 0;
+    transform: scale(0.4) translateY(-20px);
+  }
+  58%, 59.99%{
+    opacity: 1;
+    transform: scale(1) translateY(-20px);
+  }
+  60%{
+    opacity: 1;
+    transform: scale(0.9) translateY(-20px);
+  }
+  66%{
+    opacity: 1;
+    transform: scale(0.9) translateY(5px);
+  }
+  74%{
+    opacity: 0;
+    transform: scale(0.4) translateY(40px);
+  }
+  75%, 79%{
+    opacity: 0;
+    transform: scale(0.4) translateY(-20px);
+  }
+  88%, 100%{
+    opacity: 1;
+    transform: scale(1) translateY(-20px);
+  }
+}
+@keyframes nudgeMouse{
+  0%{
+    transform: translateY(0);
+  }
+  20%{
+    transform: translateY(8px);
+  }
+  30%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(8px);
+  }
+  60%{
+    transform: translateY(0);
+  }
+  80%{
+    transform: translateY(8px);
+  }
+  90%{
+    transform: translateY(0);
+  }
+}
+@keyframes nudgeText {
+  0%{
+    transform: translateY(0);
+  }
+  20%{
+    transform: translateY(2px);
+  }
+  30%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(2px);
+  }
+  60%{
+    transform: translateY(0);
+  }
+  80%{
+    transform: translateY(2px);
+  }
+  90%{
+    transform: translateY(0);
+  }
+}
+
+
+  /* styles.css */
+p{
+  @apply
+   text-justify;
+}
+
